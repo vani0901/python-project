@@ -1,0 +1,8 @@
+static/css/con.css
+.idea/
+.venv/
+
+# Ignore specific files
+templates/con.html
+
+

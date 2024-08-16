@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/title.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Crop Recommendation System</h1>
+        <div class="button-container">
+            <a class="btn" href="{{ url_for('abstract') }}">Abstract</a>
+            <a class="btn" href="{{ url_for('example') }}">Example</a>
+            <a class="btn" href="{{ url_for('ranges') }}">Ranges</a>
+            <a class="btn" href="{{ url_for('uad') }}">Home</a>
+             <a class="btn" href="{{ url_for('conclusion') }}">Conclusion</a>
+
+        </div>
+    </div>
+
+    <div id="content">
+        <!-- Content will be loaded here -->
+        {% block content %}{% endblock %}
+    </div>
+
+
+</body>
+</html>

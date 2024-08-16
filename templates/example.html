@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Forest Algorithm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #86f895;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            display: none;
+        }
+
+        .container.active {
+            display: block;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        ul {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .nav-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn, .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        .btn:hover, .button:hover {
+            background-color: #45a049;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="screen1" class="container active">
+        <h1>Random Forest Algorithm in Crop Recommendation System</h1>
+        <p>The Random Forest algorithm is a powerful and versatile machine learning method capable of performing both regression and classification tasks. It is particularly effective in crop recommendation systems due to its ability to handle diverse and complex datasets. Here's how it works in the context of crop recommendation:</p>
+        <ul>
+            <li>The algorithm analyzes historical agricultural data, including soil properties, weather patterns, and past crop yields.</li>
+            <li>It constructs multiple decision trees, each considering different combinations of environmental factors and crop performance metrics.</li>
+            <li>Each tree makes predictions based on subsets of the data, ensuring that the model captures a wide range of patterns and relationships.</li>
+            <li>The final recommendation is derived by aggregating the predictions from all trees, resulting in a robust and accurate crop suggestion.</li>
+        </ul>
+        <h2>Key Points</h2>
+        <ul>
+            <li>Random Forest is an ensemble learning method.</li>
+            <li>It combines multiple decision trees to improve accuracy and control over-fitting.</li>
+            <li>Each tree is built from a random subset of the training data.</li>
+            <li>Final predictions are made by aggregating the predictions of all individual trees.</li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="btn" onclick="showScreen(2)">Next</button>
+        </div>
+    </div>
+
+    <div id="screen2" class="container">
+        <h1>Benefits of Using Random Forest for Crop Recommendation</h1>
+        <p>Implementing a crop recommendation system using Random Forest offers several advantages:</p>
+        <ul>
+            <li><strong>Precision:</strong> Provides precise recommendations tailored to specific soil and climate conditions.</li>
+            <li><strong>Efficiency:</strong> Optimizes resource allocation by suggesting crops that are likely to perform well.</li>
+            <li><strong>Flexibility:</strong> Can accommodate diverse environmental factors and adapt to changing conditions.</li>
+            <li><strong>Scalability:</strong> Handles large datasets efficiently, making it suitable for wide-scale agricultural applications.</li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="btn" onclick="showScreen(1)">Prev</button>
+            <button class="btn" onclick="showScreen(3)">Next</button>
+        </div>
+    </div>
+
+    <div id="screen3" class="container">
+        <h2>Example Scenario</h2>
+        <p>Suppose you have collected data on:</p>
+        <ul>
+            <li><strong>Nitrogen levels</strong>: Important for plant growth and development.</li>
+            <li><strong>Potassium levels</strong>: Essential for plant health and disease resistance.</li>
+            <li><strong>Phosphorus levels</strong>: Critical for root development and overall plant growth.</li>
+            <li><strong>pH levels</strong>: Indicates soil acidity or alkalinity, influencing nutrient availability.</li>
+            <li><strong>Rainfall</strong>: Influences water availability for crops.</li>
+            <li><strong>Temperature</strong>: Affects crop growth rates and season suitability.</li>
+            <li><strong>Humidity</strong>: Impacts moisture levels in the air and soil.</li>
+        </ul>
+        <p><b>Using a Random Forest algorithm:</b></p>
+        <ul>
+            <li>The system builds multiple decision trees, each considering different combinations of these environmental factors.</li>
+            <li>For a new farming scenario, the system inputs current soil test results, weather forecasts, and historical crop performance into each tree.</li>
+            <li>The Random Forest aggregates predictions from all trees to recommend the crop or combination of crops that are most likely to thrive based on similar historical and current environmental conditions.</li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="btn" onclick="showScreen(2)">Prev</button>
+            <button class="btn" onclick="showScreen(4)">Next</button>
+        </div>
+    </div>
+
+    <div id="screen4" class="container">
+        <h1>Random Forest in Action</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/exam.jpeg') }}" alt="Random Forest in Action">
+        </div>
+        <div class="nav-buttons">
+            <button class="btn" onclick="showScreen(3)">Prev</button>
+            <button class="button" onclick="window.location.href = '/ranges';">Next</button>
+            <button class="btn" onclick="window.close();">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showScreen(screenNumber) {
+            document.querySelectorAll('.container').forEach(container => {
+                container.classList.remove('active');
+            });
+            document.getElementById('screen' + screenNumber).classList.add('active');
+        }
+    </script>
+</body>
+</html>

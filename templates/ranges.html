@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Factor Ranges and Soil Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #86f895;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            text-align: left;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .soil-type {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .nav-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: #4CAF50; /* Green color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="environmental-factors">
+        <h1>Environmental Factor Ranges</h1>
+        <p>Here are the ranges for various environmental factors:</p>
+        <p><b>Nitrogen</b> content should be between 0 to 140 kg/ha.</p>
+        <p><b>Phosphorus</b> content should range from 5 to 128 ppm.</p>
+        <p><b>Potassium</b> content should be between 5 to 92.5 mg/kg.</p>
+        <p><b>Temperature</b> should vary from 14°C to 37.2°C.</p>
+        <p><b>Humidity</b> should be in the range of 15.7% to 99.9%.</p>
+        <p><b>pH</b> levels should be between 4.5 to 8.3.</p>
+        <p><b>Rainfall</b> should range from 0 to 213 mm.</p>
+        <div class="nav-buttons">
+            <button class="btn" onclick="showSoilTypes()">Next</button>
+        </div>
+    </div>
+
+    <div class="container" id="soil-types" style="display: none;">
+        <h1>Soil Types and Recommended Crops</h1>
+
+        <div class="soil-info">
+            <p><span class="soil-type">Red Soil:</span> Red soil is suitable for crops like Cotton, Wheat, Pulses, Millets, Oilseeds, Chickpea, Pigeonpeas, Mothbeans, Mungbean, Blackgram, Jute, Banana, Apple.</p>
+        </div>
+
+        <div class="soil-info">
+            <p><span class="soil-type">Alluvial Soil:</span> Alluvial soil is fertile and suitable for crops like Rice, Sugarcane, Maize, Cotton, Banana, Mango, Orange, Papaya, Coffee, Kidneybeans, Pomegranate.</p>
+        </div>
+
+        <div class="soil-info">
+            <p><span class="soil-type">Black Soil:</span> Black soil (also known as Regur soil) is ideal for crops like Cotton, Millets, Sugarcane, Soybeans, Wheat, Jute, Kidneybeans, Chickpea, Pomegranate.</p>
+        </div>
+
+        <div class="soil-info">
+            <p><span class="soil-type">Saline Soil:</span> Saline soil is suitable for crops like Sugar beet, Cotton, Pigeonpeas, Kidneybeans.</p>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn" onclick="showEnvironmentalFactors()">Prev</button>
+            <a href="/uad" class="btn">Next</a>
+        </div>
+    </div>
+
+    <script>
+        function showSoilTypes() {
+            document.getElementById('environmental-factors').style.opacity = '0';
+            setTimeout(function() {
+                document.getElementById('environmental-factors').style.display = 'none';
+                document.getElementById('soil-types').style.opacity = '1';
+                document.getElementById('soil-types').style.display = 'block';
+            }, 300);
+        }
+
+        function showEnvironmentalFactors() {
+            document.getElementById('soil-types').style.opacity = '0';
+            setTimeout(function() {
+                document.getElementById('soil-types').style.display = 'none';
+                document.getElementById('environmental-factors').style.opacity = '1';
+                document.getElementById('environmental-factors').style.display = 'block';
+            }, 300);
+        }
+    </script>
+</body>
+</html>

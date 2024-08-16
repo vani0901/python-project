@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Questionnaire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Farmer Questionnaire</h1>
+        <form action="/submit_questionnaire" method="POST">
+            <div class="form-group">
+                <label for="farm_ownership">Do you currently own a farm?</label>
+                <select id="farm_ownership" name="farm_ownership" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="farm_size">How many acres is your farm?</label>
+                <select id="farm_size" name="farm_size" required>
+                    <option value="less_than_10">Less than 10</option>
+                    <option value="10_50">10-50</option>
+                    <option value="50_100">50-100</option>
+                    <option value="100_plus">100+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="technology_use">Do you use technology or digital tools for farm management?</label>
+                <select id="technology_use" name="technology_use" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>What type of soil do you have on your farm?</label>
+                <select id="soil_type" name="soil_type" required>
+                    <option value="">Select Soil Type</option>
+                    <option value="Alluvial">Alluvial</option>
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Laterite">Laterite</option>
+                    <option value="Arid">Arid</option>
+                    <option value="Saline">Saline</option>
+                    <option value="Peaty">Peaty</option>
+                    <option value="Forest">Forest</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>What is your primary source of irrigation?</label>
+                <select id="irrigation" name="irrigation" required>
+                    <option value="">Select Irrigation Source</option>
+                    <option value="Rainfed">Rainfed</option>
+                    <option value="Canal">Canal</option>
+                    <option value="Borewell">Borewell</option>
+                    <option value="Drip Irrigation">Drip Irrigation</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="crops_grown">Which crops have you grown in the past year?</label>
+                <textarea id="crops_grown" name="crops_grown" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Do you use any fertilizers?</label>
+                <select id="fertilizers" name="fertilizers" required>
+                    <option value="">Select Fertilizer Use</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <button type="submit" >Submit</button>
+        </form>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/in.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Crop Recommendation Result</h1>
+        <div class="recommended-crops">
+            <p class="best-crop">{{ best_crop }}</p>
+            {% if other_crops %}
+                <p class="other-crops">Other recommended crops: {{ other_crops }}</p>
+            {% else %}
+                <p>No other recommended crops.</p>
+            {% endif %}
+        </div>
+        <div class="button-container">
+            <button onclick="window.history.back()" class="button prev-button">Previous</button>
+            <button onclick="window.location.href='/conclusion'" class="button next-button">Next</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; /* Remove default margin */
+  background-image: url('/static/images/one.jpg') /* Replace with your image path */
+  background-size: cover; /* Resize image to cover the entire background */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  height: 100vh; /* Set body height to 100% viewport height */
+  display: flex; /* Allow centering of form container */
+  justify-content: center; /* Center form container horizontally */
+  align-items: center; /* Center form container vertically */
+}
+
+/* Form container styles */
+.form-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff; /* Set white background for form */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  max-width: 500px; /* Set maximum width for responsiveness */
+  width: 80%; /* Responsive sizing based on viewport width */
+}
+
+/* Heading (h1) styles */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Set heading text color */
+}
+
+/* Form group styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Label styles */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333; /* Set label text color */
+}
+
+/* Select element styles */
+select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+/* Textarea element styles */
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+/* Button styles */
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}

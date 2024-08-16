@@ -1,0 +1,63 @@
+body {
+    background-image: url('/static/images/login.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure full viewport height */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-attachment: fixed; /* Keep the background fixed */
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+}
+
+.card-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.2rem;
+    background-color: #17a2b8; /* Aqua Blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    animation: glow 1s infinite alternate;
+    box-shadow: 0 0 20px rgba(23, 162, 184, 0.8); /* Lighter Aqua Blue */
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(23, 162, 184, 0.8); /* Lighter Aqua Blue */
+    }
+    to {
+        box-shadow: 0 0 20px rgba(23, 162, 184, 0); /* Transparent */
+    }
+}

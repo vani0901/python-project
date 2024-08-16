@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('/static/images/one.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    max-width: 1000px; /* Increased max-width */
+    width: 100%; /* Set width to 100% to use the full space */
+    margin: 0 auto;
+    padding: 30px; /* Increased padding for a larger appearance */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px; /* Increased gap between grid items */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px; /* Increased font size for labels */
+    font-weight: bold; /* Made labels bold */
+    color: #333;
+}
+
+select, input[type="number"], input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 12px; /* Increased padding for larger input fields */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-bottom: 15px; /* Added margin-bottom for spacing */
+}
+
+select {
+    font-size: 16px; /* Set font size for select elements */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    grid-column: span 2;
+    width: 40%;
+    margin: 0 auto; /* Center the button */
+    display: flex;
+    justify-content: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}

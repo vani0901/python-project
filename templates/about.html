@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Crop Recommendation System</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #c0f8a6;
+            color: #1a1818;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #06aa0e 3px solid;
+        }
+        header a {
+            color: #0d0d0d;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header ul li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header h1 {
+            float: left;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .about-section {
+            padding: 20px;
+            background: #fbf5d9;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(200, 176, 98, 0.142);
+        }
+        .about-section img {
+
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+        .about-section .bio {
+            display: flex;
+            align-items: center;
+        }
+        .about-section .bio div {
+            flex: 1;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Crop Recommendation System</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="about-section">
+            <h2>About the Project</h2>
+            <p>This Crop Recommendation System is developed to assist farmers in selecting the best crops for their fields based on various factors. Using the power of machine learning, specifically the Random Forest algorithm, the system analyzes environmental and soil parameters to provide accurate crop recommendations.</p>
+            
+            <h2>About the Creator</h2>
+            <div class="bio">
+                <img src="/static/images/1.jpeg" alt="Project Maker 1">
+                <div>
+                    <h3>Project Maker 1</h3>
+                    <p> Project Maker 1: Yochana. Sinne has leveraged the power of Random Forest algorithms to create a robust and efficient system that helps farmers make informed decisions about crop selection based on soil and environmental conditions. This project aims to support sustainable farming practices and boost agricultural productivity.
+
+                    </p>
+                </div>
+                <img src="/static/images/2.jpeg" alt="Project Maker 2">
+                <div>
+                    <h3>Project Maker 2</h3>
+                    <p>Project Maker 2: This Crop Recommendation System was developed by K.Vani, a passionate maker with a keen interest in applying machine learning techniques to solve real-world agricultural problems. With a background in data analysis and agronomy, by processing the data of the crops, soil, climate, temperture in particular data set.</p>
+                </div>
+            </div>
+        </section>
+        <a href="{{ url_for('main') }}" class="back-button">Back</a>
+    </div>
+</body>
+</html>

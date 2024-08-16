@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/two.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    padding: 20px;
+    margin: 0; /* Reset default margin to ensure full coverage of background */
+}
+
+.container {
+    max-width: 800px; /* Increased max-width for better layout */
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.recommended-crops {
+    margin-top: 20px;
+    align-items: center;
+}
+
+.best-crop {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4CAF50;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.other-crops {
+    margin-top: 10px; /* Add spacing between best crop and other crops */
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 12px 24px; /* Adjust padding for better button size */
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+     margin-right: 100px;
+}
+.button:last-child {
+    margin-right: 0;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
